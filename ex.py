@@ -1,4 +1,4 @@
-import subprocess
+jiimport subprocess
 import sys
 import os
 import json
@@ -474,6 +474,23 @@ def submit():
 
     # Send the PDF for download
     return send_file(pdf_file, as_attachment=True)
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    # ... your existing submission & PDF code ...
+    return send_file(pdf_file, as_attachment=True)
+
+# ---------------- NEW ROUTES ----------------
+@app.route("/view_submissions")
+def view_submissions():
+    with open(JSON_FILE, "r") as f:
+        data = json.load(f)
+    return data  # shows JSON in browser
+
+@app.route("/download_submissions")
+def download_submissions():
+    return send_file(JSON_FILE, as_attachment=True)
+# ---------------- END NEW ROUTES -------------
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
