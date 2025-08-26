@@ -1,4 +1,4 @@
-import subprocess
+jiimport subprocess
 import sys
 import os
 import json
@@ -475,8 +475,8 @@ def submit():
     # Send the PDF for download
     return send_file(pdf_file, as_attachment=True)
 
-@app.route('/submit', methods=['POST'])
-def submit():
+@app.route('/submit_alt', methods=['POST'])
+def submit_alt():
     # ... your existing submission & PDF code ...
     return send_file(pdf_file, as_attachment=True)
 
