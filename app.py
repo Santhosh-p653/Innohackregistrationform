@@ -256,7 +256,7 @@ form_html = """
 <body>
   <div class="card">
     <div class="kicker"><span class="dot"></span> Tech Fest • Team Registration</div>
-    <h2 class="title">Hackathon Team Registration</h2>
+    <h2 class="title">Innohack Team Registration</h2>
     <p class="subtitle">Register your squad. Make sure emails and register numbers are correct—this will be used for all event communication.</p>
 
     <form method="POST" action="/submit" id="regForm" novalidate>
